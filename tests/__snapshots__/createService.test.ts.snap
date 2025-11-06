@@ -1,0 +1,31 @@
+// Bun Snapshot v1, https://bun.sh/docs/test/snapshots
+
+exports[`API Tests POST /api/accounts validation is not passed - return list of zod errors 1`] = `
+"[
+  {
+    "expected": "string",
+    "code": "invalid_type",
+    "path": [
+      "name"
+    ],
+    "message": "Invalid input: expected string, received undefined"
+  }
+]"
+`;
+
+exports[`API Tests POST /api/accounts scope is not equal account, prospect, child - zod must validate it as well 1`] = `
+"[
+  {
+    "code": "invalid_value",
+    "values": [
+      "account",
+      "prospect",
+      "child"
+    ],
+    "path": [
+      "scope"
+    ],
+    "message": "Invalid option: expected one of \\"account\\"|\\"prospect\\"|\\"child\\""
+  }
+]"
+`;
